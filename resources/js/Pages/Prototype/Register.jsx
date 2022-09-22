@@ -5,7 +5,7 @@ import { Link, Head } from '@inertiajs/inertia-react';
 
 export default function Register(){
 return (
-    <>
+<>
     <Head title="Sign-Up" />
     <div className="mx-auto max-w-screen min-h-screen bg-black text-white md:px-10 px-3">
         <div className="fixed top-[-50px] hidden lg:block">
@@ -42,25 +42,24 @@ return (
                         </div>
                     </div>
                     <div className="grid space-y-[14px] mt-[30px]">
-                        <Button>
-                            <span className="text-base font-semibold">
-                                Sign Up
-                            </span>
-                        </Button>
-                        <Link href={route('prototype.login')}>
-                        <Button variant='light-outline'>
-                            <span className="text-base text-white">
-                                Sign In to My Account
-                            </span>
-                        </Button>
+                        <Link href={route('prototype.dashboard')}>
+                            <Button>
+                                <span className="text-base font-semibold">
+                                    Sign Up
+                                </span>
+                            </Button>
                         </Link>
-
-
+                        <Link href={route('prototype.login')}>
+                            <Button variant='light-outline'>
+                                <span className="text-base text-white">
+                                    Sign In to My Account
+                                </span>
+                            </Button>
+                        </Link>
                     </div>
                 </form>
             </div>
         </div>
     </div>
-    </>
-    
+</>
 )};

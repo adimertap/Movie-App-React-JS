@@ -44,11 +44,14 @@ export default function Login(){
                         </div>
                     </div>
                     <div className="grid space-y-[14px] mt-[30px]">
-                        <Button type='button' variant='primary'>
-                            <span className='text-base font-semibold'>
-                                Start Watching
-                            </span>
-                        </Button>
+                        <Link href={route('prototype.dashboard')}>
+                            <Button type='button' variant='primary'>
+                                <span className='text-base font-semibold'>
+                                    Start Watching
+                                </span>
+                            </Button>
+                        </Link>
+                        
                         <Link href={route('prototype.register')}>
                             <Button type='button' variant='light-outline'>
                                 <span className="text-base text-white">
@@ -61,7 +64,5 @@ export default function Login(){
             </div>
         </div>
     </div>
-    </>
-
-    
+    </> 
 )};
