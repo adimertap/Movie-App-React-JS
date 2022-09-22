@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Auth\Events\Login;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -14,17 +15,20 @@ use Inertia\Inertia;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/', function () {
-    return Inertia::render('Welcome', [
-        'canLogin' => Route::has('login'),
-        'canRegister' => Route::has('register'),
-        'laravelVersion' => Application::VERSION,
-        'phpVersion' => PHP_VERSION,
-    ]);
-});
+Route::redirect('/','/prototype/login');
 
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
+
+Route::prefix('prototype')->name('prototype.')->group(function(){
+    Route::get('/login', function(){
+        return Inertia::render('Prototype/Login');
+    })->name('login');
+
+    Route::get('/register', function(){
+        return Inertia::render('Prototype/Register');
+    })->name('register');
+});
 
 require __DIR__.'/auth.php';
