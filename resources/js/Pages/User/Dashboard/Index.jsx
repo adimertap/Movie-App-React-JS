@@ -40,7 +40,7 @@ export default function Dashboard({ auth, featuredMovies, movies }) {
                     ))}
                 </Flickity>
             </div>
-            <div className="mt-[40px]">
+            <div className="mt-[20px]">
                 <div className="font-semibold text-[22px] text-black mb-4">
                     Browse
                 </div>

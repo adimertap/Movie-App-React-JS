@@ -20,9 +20,9 @@ export default function FeaturedMovie({
     
 
 return(
-    <div className="absolute overflow-hidden group mr-[30px]">
+    <div className="absolute overflow-hidden group mr-[10px]">
         {/* Movie Thumbnail */}
-        <img src={thumbnail} className="object-cover rounded-[30px] w-[400px] h-[240px]" alt="" />
+        <img src={thumbnail} className="object-cover rounded-[30px] w-[380px] h-[250px]" alt="" />
         {/* Rating */}
         <div className="rating absolute top-0 left-0">
             <div className="p-[30px] flex items-center gap-1">

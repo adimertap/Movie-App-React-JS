@@ -38,10 +38,10 @@ export default function SubscriptionDetail({
 
             {/* PREMIUM */}
             {isPremium && (
-                <div className="mt-auto pr-[30px]">
+                <div className="mt-auto pr-[40px]">
                     <div className="p-5 bg-black rounded-[25px]">
                         <img src="/icons/ic_star-rounded.svg" alt="" />
-                        <div className="text-white text-lg font-semibold mt-4 mb-8">
+                        <div className="text-white text-lg font-semibold mt-4 mb-4">
                             {name}
                         </div>
                         <div className="text-white text-sm mb-2">
